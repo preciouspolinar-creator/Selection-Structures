@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+    int main() {
+        float num1, num2, total;
+        char operator;
+        
+        printf("Enter first number: ");
+        scanf("%f", &num1);
+        printf("Enter second number: ");
+        scanf("%f", &num2);
+        printf("Enter operator(+, -, *, /): ");
+        scanf(" %c", &operator);
+        
+        
+        switch (operator) {
+  case '+':
+      total = num1 + num2;
+    printf("%f + %f = %.2f", num1, num2, total);
+    break;
+  case '-':
+      total = num1 - num2;
+    printf("Result: %f - %f = %2f", num1, num2, total);
+    break;
+  case '*':
+      total = num1* num2;
+    printf("Result: %f * %f = %.2f", num1, num2, total);
+    break;
+  case '/':
+      total = num1 / num2;
+    printf("%f / %f  = %.2f", num1, num2, total );
+    break;
+            
+default:
+   printf("Invalid operator.");
+        
+}
+        
+    return 0;
+}
