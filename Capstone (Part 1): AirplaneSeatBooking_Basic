@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+
+int main() {
+
+    char travelClass;
+    float bagWeight, baseFareE = 2500.00, baseFareB = 6500.00, bagAllowanceE = 20.00, bagAllowanceB = 40.00, excessBag_fee, totalFare;
+
+    printf("Enter travel class (E-conomy / B-usiness): ");
+    scanf("%c", &travelClass);
+    printf("Enter baggage weight (kg): ");
+    scanf("%f", &bagWeight);
+
+    if (travelClass == 'E' || travelClass == 'e') {
+        if(bagWeight > bagAllowanceE){
+            excessBag_fee = (bagWeight-bagAllowanceE )* 150;
+        totalFare = baseFareE + excessBag_fee;
+           
+            printf("----- BOARDING SUMMARY -----\n");
+            printf("Travel Class: Economy\nBase Fare: PHP %.2f\nBaggage Weight: %.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: PHP %.2f\nTotal Fare: PHP %.2f\n-----------------------------", baseFareE, bagWeight, bagAllowanceE, excessBag_fee, totalFare);
+        }else{
+             excessBag_fee = (bagWeight-bagAllowanceE )* 150;
+        totalFare = baseFareE + excessBag_fee;
+           
+            printf("----- BOARDING SUMMARY -----\n");
+            printf("Travel Class: Economy\nBase Fare: PHP %.2f\nBaggage Weight: %.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: PHP %.2f\nTotal Fare: PHP %.2f\n-----------------------------", baseFareE, bagWeight, bagAllowanceE, excessBag_fee, totalFare);
+}
+    
+    
+    }else if(travelClass == 'B' || travelClass == 'b'){
+        
+        if(bagWeight > bagAllowanceB){
+            excessBag_fee = (bagWeight-bagAllowanceB )* 150;
+        totalFare = baseFareB + excessBag_fee;
+           
+            printf("----- BOARDING SUMMARY -----\n");
+            printf("Travel Class: Business\nBase Fare: PHP %.2f\nBaggage Weight: %.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: PHP %.2f\nTotal Fare: PHP %.2f\n-----------------------------", baseFareB, bagWeight, bagAllowanceB, excessBag_fee, totalFare);
+            
+        }else{
+             excessBag_fee = (bagWeight-bagAllowanceB )* 150;
+        totalFare = baseFareB + excessBag_fee;
+           
+            printf("----- BOARDING SUMMARY -----\n");
+            printf("Travel Class: Business\nBase Fare: PHP %.2f\nBaggage Weight: %.2f kg (Allowance: %.2f kg)\nExcess Baggage Fee: PHP %.2f\nTotal Fare: PHP %.2f\n-----------------------------", baseFareE, bagWeight, bagAllowanceB, excessBag_fee, totalFare);
+    }
+    }else{
+        printf("Invalid Input!");
+    }
+          return 0;
+}
